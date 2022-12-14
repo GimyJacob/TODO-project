@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+            <div class="shadow card" style="width: 18rem;" >
+<!--  <img class="card-img-top" src="..." alt="Card image cap">-->
+                            <div class="card-body"style="background-color:Violet;">
+                                <h5 class="card-title">{{task.name}}</h5>
+                                <p class="card-text"> <b>{{task.priority}}</b></p><br>
+                                <p class="card-text"> <b>{{task.date}}</b></p>
+                                <a href="{% url 'delete' task.id %}" class="btn btn-danger">Done</a>
+                                <a href="{% url 'update' task.id %}" class="btn btn-primary">Update</a>
+                            </div>
+
+            </div>
+
+{% endblock %}
